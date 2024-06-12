@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const menuItems = [
     "Services",
@@ -14,7 +16,7 @@ const Navbar = () => {
     <div className="py-2">
       <div className="my-container">
         <div className="flex justify-between gap-4 text-white">
-          <div>
+          <Link to={'/'}>
 
           <figure className="flex items-center !w-24 md:!w-32 whitespace-nowrap">
             <img
@@ -23,7 +25,7 @@ const Navbar = () => {
               alt="e-VISA"
               />
           </figure>
-              </div>
+              </Link>
           <div>
             <ul className="flex items-center gap-4 text-[14px] md:text-base">
               {menuItems.map((item, index) => (

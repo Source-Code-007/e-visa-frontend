@@ -1,4 +1,4 @@
-import { Form, Input, message } from "antd";
+import { Form, Input, Skeleton, message } from "antd";
 import { useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useGetRandomCaptchaQuery } from "../redux/api/captcha/captchaApi";
@@ -78,6 +78,7 @@ const Homepage = () => {
             {unikal_numb_query ? (
               <div className="space-y-2">
                 <h2 className="text-white">Insert your security code</h2>
+                {isLoadingSecurityCode ?  <Skeleton.Button active  className="!w-full !h-8"/>: 
                 <Form.Item name={"securityCode"}>
                   <Input
                     placeholder="Enter your security code here"
@@ -85,6 +86,7 @@ const Homepage = () => {
                     onChange={(e) => setSecurityCode(e.target.value)}
                   />
                 </Form.Item>
+}
               </div>
             ) : (
               <div className="space-y-2">
@@ -102,6 +104,8 @@ const Homepage = () => {
             {/* check captcha */}
             {!unikal_numb_query && captchaData && (
               <div className="my-3">
+               {
+                isLoadingCaptcha ?  <Skeleton.Button active  className="!w-full !h-8"/>: 
                 <div className="flex items-center gap-2">
                   <img src={captchaData?.data?.img} alt="captcha" />
                   <img
@@ -117,6 +121,7 @@ const Homepage = () => {
                     />
                   </Form.Item>
                 </div>
+}
               </div>
             )}
 

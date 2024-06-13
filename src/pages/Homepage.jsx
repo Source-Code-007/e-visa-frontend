@@ -1,11 +1,6 @@
 import { Form, Input, message } from "antd";
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import {
-  LoadCanvasTemplate,
-  LoadCanvasTemplateNoReload,
-} from "react-simple-captcha";
 import { useGetRandomCaptchaQuery } from "../redux/api/captcha/captchaApi";
 import { useGetAllSecurityCodeQuery } from "../redux/api/securityCode/securityCodeApi";
 import { useGetSingleVisaQuery } from "../redux/api/visa/visaApi";
@@ -105,7 +100,7 @@ const Homepage = () => {
             )}
 
             {/* check captcha */}
-            {!unikal_numb_query && (
+            {!unikal_numb_query && captchaData && (
               <div className="my-3">
                 <div className="flex items-center gap-2">
                   <img src={captchaData?.data?.img} alt="captcha" />

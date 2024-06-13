@@ -50,12 +50,12 @@ const Navbar = () => {
         <tbody>
           <tr>
             <td align="left">
-              <Link to="https://evisa.e-gov.kg/index.php" className="inline-block !w-[160px] !mt-[8px]">
+              <Link to="https://evisa.e-gov.kg/index.php" className="inline-block !w-[100px] md:!w-[160px] !mt-[8px]">
                 <img src="https://evisa.e-gov.kg/images/img/logo.png" className="logo_6999" />
               </Link>
             </td>
             <td align="right">
-              <nav role="navigation" className="nav">
+              <nav role="navigation" className="nav !font-bold">
                 <ul className="nav-items">
                   <li className="nav-item dropdown" onClick={()=> setIsServiceSubmenuOpen(!isServiceSubmenuOpen)} ref={serviceDropdownBtnRef}>
                     <a href="#" className="nav-link">

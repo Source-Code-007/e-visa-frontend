@@ -1,10 +1,18 @@
 const Footer = () => {
   return (
-    <div className="bg-slate-600 py-2 text-center text-white">
-      <footer>
-        <p>Safe travel with us!</p>
-      </footer>
-    </div>
+   <table className="wdt_900" cellPadding="0" cellSpacing="0">
+            <tbody><tr className="flex items-center">
+                <td align="left" className="flex gap-[2px] items-center">
+                    <a href="#" target="_blank"><img src="https://evisa.e-gov.kg/images/img/icon_tviter.png"/></a>
+                    <a href="#" target="_blank"><img src="https://evisa.e-gov.kg/images/img/icon_instagram.png"/></a>
+                    <a href="#" target="_blank"><img src="https://evisa.e-gov.kg/images/img/icon_facebook.png"/></a>
+                    <a href="#" target="_blank"><img src="https://evisa.e-gov.kg/images/img/icon_vkontakte.png"/></a>
+                </td>
+                <td align="right">
+                    <a href="http://www.mfa.gov.kg/" target="_blank"><img src="https://evisa.e-gov.kg/images/img/mid.png"/></a>
+                </td>
+            </tr>
+        </tbody></table>
   );
 };
 

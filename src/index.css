@@ -217,6 +217,12 @@ body{
     pointer-events: auto;
 }
 
+/* footer */
+.wdt_900{
+	width:900px;
+    margin: auto;
+}
+
 
 
 /* Initially hide print content */

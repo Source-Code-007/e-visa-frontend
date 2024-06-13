@@ -22,7 +22,7 @@ const CheckPage = () => {
 
   return (
     <div className="py-6 pt-10">
-      <div className="my-container">
+      <div className="px-2 md:my-container">
 
         {
           isLoadingVisa ? 
@@ -32,7 +32,7 @@ const CheckPage = () => {
           </div>
           : <>
                   {/* Data */}
-        <div className="w-5/6 xl:w-3/6 mx-auto text-center space-y-6 md:space-y-8">
+        <div className="w-full md:w-5/6 xl:w-3/6 mx-auto text-center space-y-6 md:space-y-8">
           <h2 className="font-bold text-white text-2xl  md:text-4xl">
             APPLICATION STATUS
           </h2>
@@ -40,14 +40,14 @@ const CheckPage = () => {
           <div className="space-y-2 w-full">
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">VISA APPLICATION STATUS</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">VISA APPLICATION STATUS</p>
                 <Input
                   value={visaData?.data?.visaApplicationStatus}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Name:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Name:</p>
                 <Input
                   value={visaData?.data?.name}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -56,7 +56,7 @@ const CheckPage = () => {
             </div>
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">
                   Date of your application status is:
                 </p>
                 <Input
@@ -65,7 +65,7 @@ const CheckPage = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Reference number:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Reference number:</p>
                 <Input
                   value={visaData?.data?.referenceNumber}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -75,14 +75,14 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Passport country:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport country:</p>
                 <Input
                   value={visaData?.data?.passportCountry}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Passport type:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport type:</p>
                 <Input
                   value={visaData?.data?.passportType}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -92,14 +92,14 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Passport number:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport number:</p>
                 <Input
                   value={visaData?.data?.passportNumber}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Issue date of passport:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Issue date of passport:</p>
                 <Input
                   value={visaData?.data?.passportIssueDate}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -109,7 +109,7 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Expiration date of passport:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Expiration date of passport:</p>
                 <Input
                   value={visaData?.data?.passportExpirationDate}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -117,7 +117,7 @@ const CheckPage = () => {
               </div>
 
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Visa validity period:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa validity period:</p>
                 <Input
                   value={visaData?.data?.visaValidityPeriod}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -127,14 +127,14 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Surname:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Surname:</p>
                 <Input
                   value={visaData?.data?.surname}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Middle Name or Patronymic:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Middle Name or Patronymic:</p>
                 <Input
                   value={visaData?.data?.middleNameOrPatronymic}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -144,14 +144,14 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Birth Date:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Birth Date:</p>
                 <Input
                   value={visaData?.data?.birthDate}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Visa type:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa type:</p>
                 <Input
                   value={visaData?.data?.visaType}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -161,14 +161,14 @@ const CheckPage = () => {
 
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Visa duration:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa duration:</p>
                 <Input
                   value={visaData?.data?.visaDuration}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100">Entry times:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Entry times:</p>
                 <Input
                   value={visaData?.data?.entryTimes}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"

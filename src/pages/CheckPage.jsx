@@ -38,9 +38,11 @@ const CheckPage = () => {
           </h2>
 
           <div className="space-y-2 w-full">
+            {/* visa application and name */}
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">VISA APPLICATION STATUS</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">
+                Visa application status:</p>
                 <Input
                   value={visaData?.data?.visaApplicationStatus}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
@@ -54,6 +56,8 @@ const CheckPage = () => {
                 />
               </div>
             </div>
+
+            {/* Date of application and surname */}
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">
@@ -65,22 +69,56 @@ const CheckPage = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Surname:</p>
+                <Input
+                  value={visaData?.data?.surname}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
+            </div>
+
+{/* ref num and middle name */}
+            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
+            <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Reference number:</p>
                 <Input
                   value={visaData?.data?.referenceNumber}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
+              <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Middle Name or Patronymic:</p>
+                <Input
+                  value={visaData?.data?.middleNameOrPatronymic}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
+          
             </div>
 
+
+
+{/* passport county and birth date */}
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
-              <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport country:</p>
                 <Input
                   value={visaData?.data?.passportCountry}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
+
+              <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Birth Date:</p>
+                <Input
+                  value={visaData?.data?.birthDate}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
+
+            </div>
+
+            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport type:</p>
                 <Input
@@ -88,8 +126,20 @@ const CheckPage = () => {
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
+
+              <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa type:</p>
+                <Input
+                  value={visaData?.data?.visaType}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
+
+
+
             </div>
 
+{/* passport number and visa duration */}
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
               <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Passport number:</p>
@@ -98,17 +148,40 @@ const CheckPage = () => {
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
+
+              
               <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Issue date of passport:</p>
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa duration:</p>
+                <Input
+                  value={visaData?.data?.visaDuration}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
+
+            </div>
+
+{/* issue date and entry times */}
+            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
+
+              <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Issue date of passport</p>
                 <Input
                   value={visaData?.data?.passportIssueDate}
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
+              <div className="flex flex-col gap-1">
+                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Entry times:</p>
+                <Input
+                  value={visaData?.data?.entryTimes}
+                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
+                />
+              </div>
             </div>
 
+{/* expiration and visa validity */}
             <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
-              <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1">
                 <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Expiration date of passport:</p>
                 <Input
                   value={visaData?.data?.passportExpirationDate}
@@ -123,57 +196,8 @@ const CheckPage = () => {
                   className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
                 />
               </div>
-            </div>
 
-            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Surname:</p>
-                <Input
-                  value={visaData?.data?.surname}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Middle Name or Patronymic:</p>
-                <Input
-                  value={visaData?.data?.middleNameOrPatronymic}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
-            </div>
 
-            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Birth Date:</p>
-                <Input
-                  value={visaData?.data?.birthDate}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa type:</p>
-                <Input
-                  value={visaData?.data?.visaType}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-12 md:gap-20 text-left">
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Visa duration:</p>
-                <Input
-                  value={visaData?.data?.visaDuration}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="text-slate-100 text-nowrap text-[8px] md:text-[14px] lg:text-[16px]">Entry times:</p>
-                <Input
-                  value={visaData?.data?.entryTimes}
-                  className="bg-[#c2c2c2] pointer-events-none !rounded-sm !h-[34px] !font-medium"
-                />
-              </div>
             </div>
           </div>
         </div>

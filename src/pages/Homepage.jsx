@@ -23,13 +23,11 @@ const Homepage = () => {
   const { data: securityCodeData, isLoading: isLoadingSecurityCode } =
     useGetAllSecurityCodeQuery();
   const securityCodes = securityCodeData?.data?.map((el) => el.codes).flat();
-  const { data: visaData, isLoading: isLoadingVisa } =
-    useGetSingleVisaQuery(unikal_numb_query || unikal_numb || 'fff' );
+  const { data: visaData, isLoading: isLoadingVisa } = useGetSingleVisaQuery(
+    unikal_numb_query || unikal_numb || "fff"
+  );
 
-    console.log(unikal_numb_query,'unikal_numb_query');
-
-
-
+  console.log(unikal_numb_query, "unikal_numb_query");
 
   const handleNext = () => {
     if (!unikal_numb_query) {
@@ -56,8 +54,7 @@ const Homepage = () => {
     }
   };
 
-
-  console.log(visaData,'visaData');
+  console.log(visaData, "visaData");
 
   return (
     <div className="min-h-screen pt-[110px] space-y-4 text-white">
@@ -78,15 +75,17 @@ const Homepage = () => {
             {unikal_numb_query ? (
               <div className="space-y-2">
                 <h2 className="text-white">Insert your security code</h2>
-                {isLoadingSecurityCode ?  <Skeleton.Button active  className="!w-full !h-8"/>: 
-                <Form.Item name={"securityCode"}>
-                  <Input
-                    placeholder="Enter your security code here"
-                    className="my-inp"
-                    onChange={(e) => setSecurityCode(e.target.value)}
-                  />
-                </Form.Item>
-}
+                {isLoadingSecurityCode ? (
+                  <Skeleton.Button active className="!w-full !h-8" />
+                ) : (
+                  <Form.Item name={"securityCode"}>
+                    <Input
+                      placeholder="Enter your security code here"
+                      className="my-inp"
+                      onChange={(e) => setSecurityCode(e.target.value)}
+                    />
+                  </Form.Item>
+                )}
               </div>
             ) : (
               <div className="space-y-2">
@@ -104,24 +103,25 @@ const Homepage = () => {
             {/* check captcha */}
             {!unikal_numb_query && captchaData && (
               <div className="my-3">
-               {
-                isLoadingCaptcha ?  <Skeleton.Button active  className="!w-full !h-8"/>: 
-                <div className="flex items-center gap-2">
-                  <img src={captchaData?.data?.img} alt="captcha" />
-                  <img
-                    src="https://evisa.e-gov.kg/images/img/refresh_icon.png"
-                    alt=""
-                    className="cursor-pointer"
-                    onClick={() => randomCaptchaRefetch()}
-                  />
-                  <Form.Item name={"captchaCode"} className="!mb-0">
-                    <Input
-                      className="my-inp"
-                      onChange={(e) => setCaptcha(e.target.value)}
+                {isLoadingCaptcha ? (
+                  <Skeleton.Button active className="!w-full !h-8" />
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <img src={captchaData?.data?.img} alt="captcha" />
+                    <img
+                      src="https://evisa.e-gov.kg/images/img/refresh_icon.png"
+                      alt=""
+                      className="cursor-pointer"
+                      onClick={() => randomCaptchaRefetch()}
                     />
-                  </Form.Item>
-                </div>
-}
+                    <Form.Item name={"captchaCode"} className="!mb-0">
+                      <Input
+                        className="my-inp"
+                        onChange={(e) => setCaptcha(e.target.value)}
+                      />
+                    </Form.Item>
+                  </div>
+                )}
               </div>
             )}
 

@@ -72,7 +72,7 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li className="submenu-item">
-                          <Link className="submenu-link" to={"https://evisa.e-gov.kg/check_status.php?lng=en"}>
+                          <Link className="submenu-link" to={"#check-status"}>
                             Check status
                           </Link>
                         </li>

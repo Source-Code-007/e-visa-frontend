@@ -17,11 +17,31 @@ export const visa = createApi({
     }),
 
     getAllVisa: builder.query({
-      query: () => "/visa",
+      query: ({page, limit}) => `/visa?page=${page}&limit=${limit}`,
+
     }),
 
     getSingleVisa: builder.query({
       query: (id) => `/visa/${id}`,
+    }),
+
+    updateVisa: builder.mutation({
+      query: (visaData) => {
+        return {
+          url: `/visa/${visaData._id}`,
+          method: "PATCH",
+          body: visaData,
+        };
+      },
+    }),
+
+    deleteVisa: builder.mutation({
+      query: (id) => {
+        return {
+          url: `/visa/${id}`,
+          method: "DELETE",
+        };
+      },
     }),
 
   }),
@@ -31,5 +51,8 @@ export const visa = createApi({
 export const {
   useGetAllVisaQuery,
   useGetSingleVisaQuery,
-  useCreateVisaMutation
+  useCreateVisaMutation,
+  useUpdateVisaMutation,
+  useDeleteVisaMutation
+
 } = visa;

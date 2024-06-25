@@ -292,7 +292,7 @@ const CheckPage = () => {
           </div>
 
           {/* visa data*/}
-          <div className="relative overflow-x-auto my-6 md:my-8 text-slate-800 font-normal space-y-1 !text-left">
+          <div className="relative overflow-x-auto my-6 md:my-8 text-slate-800 font-normal space-y-[2px] !text-left">
             <div className="flex gap-2 justify-between">
               <p className="print-content-serif">Толук аты-жөнү/Full name:</p>
               <div className="w-[160px]">
@@ -315,7 +315,7 @@ const CheckPage = () => {
                 <h2 className="print-content-serif">Bangladesh</h2>
               </div>
             </div>
-            <div className="flex gap-2 justify-between">
+            <div className="flex gap-2 justify-between items-end">
               <p className="print-content-serif">
                 Жол жүрүүчү документтин (паспорттун) номери / Number <br /> of
                 Travel document (passport):
@@ -336,7 +336,7 @@ const CheckPage = () => {
                 </h2>
               </div>
             </div>
-            <div className="flex gap-2 justify-between">
+            <div className="flex gap-2 justify-between items-end">
               <p className="print-content-serif">
                 Жол жүрүүчү документтин (паспорттун) берилген датасы/ DATE of{" "}
                 <br /> issue of the travelling document (passport):
@@ -347,7 +347,7 @@ const CheckPage = () => {
                 </h2>
               </div>
             </div>
-            <div className="flex gap-2 justify-between">
+            <div className="flex gap-2 justify-between items-end">
               <p className="print-content-serif">
                 Жол жүрүүчү документтин (паспорттун) бүткөн датасы/ Date of{" "}
                 <br /> expiry of the travelling document (passport):

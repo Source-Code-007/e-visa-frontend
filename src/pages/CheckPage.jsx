@@ -18,7 +18,7 @@ const CheckPage = () => {
     documentTitle: `evisa.e-gov.kg_printStatus.php_lng=en&unikal_numb=${visaData?.data?.referenceNumber}`,
     // onBeforePrint: () => {console.log("before printing...");},
     // onAfterPrint: () => {console.log("after printing...");},
-    removeAfterPrint: true,
+    removeAfterPrint: false,
   });
 
   return (
@@ -286,13 +286,13 @@ const CheckPage = () => {
               <img
                 src={visaData?.data?.userQrCodeImg}
                 alt="qr code"
-                className="h-20 w-20 shadow-md ml-auto"
+                className="w-[75px] shadow-md ml-auto"
               />
             </div>
           </div>
 
           {/* visa data*/}
-          <div className="relative overflow-x-auto my-6 md:my-8 text-slate-800 font-normal space-y-[2px] !text-left">
+          <div className="relative overflow-x-auto mb-6 mt-2 text-slate-800 font-normal space-y-[2px] !text-left">
             <div className="flex gap-2 justify-between">
               <p className="print-content-serif">Толук аты-жөнү/Full name:</p>
               <div className="w-[160px]">
